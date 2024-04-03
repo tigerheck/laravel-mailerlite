@@ -37,7 +37,7 @@ class MailerLiteServiceProvider extends ServiceProvider
     protected function registerMailerLite()
     {
         $this->app->bind('mailerlite', function ($app) {
-            return new CoreMailerLite(config('mailerlite.api_key'));
+            return new CoreMailerLite(['api_key' => config('mailerlite.api_key')]);
         });
     }
 }
