@@ -3,7 +3,7 @@
 namespace TigerHeck\MailerLite;
 
 use Illuminate\Support\ServiceProvider;
-use MailerLiteApi\MailerLite as CoreMailerLite;
+use MailerLite\MailerLite as CoreMailerLite;
 
 class MailerLiteServiceProvider extends ServiceProvider
 {
