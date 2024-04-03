@@ -1,0 +1,39 @@
+{
+    "name": "tigerheck/laravel-mailerlite",
+    "type": "library",
+    "license": "MIT",
+    "description": "Laravel wrapper for Mailerlite APIs",
+    "homepage": "https://tigerheck.com",
+    "keywords": [
+        "laravel",
+        "mailerlite-api",
+        "mailerlite"
+    ],
+    "authors": [
+        {
+            "name": "Chirag Goti",
+            "email": "gotichirag2011@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "mailerlite/mailerlite-php": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TigerHeck\\MailerLite\\MailerLiteServiceProvider"
+            ],
+            "aliases": {
+                "MailerLite": "TigerHeck\\MailerLite\\MailerLiteFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "TigerHeck\\MailerLite\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
