@@ -22,10 +22,10 @@ class MailerLiteHttpLayer extends HttpLayer {
                 $body = $response->getBody()->getContents();
         }
 
-        return (object) [
+        return [
             'status_code' => $response->getStatusCode(),
             'headers' => $response->getHeaders(),
-            'body' => is_array($body) ? collect($body) : $body,
+            'body' => $body,
             'response' => $response,
         ];
     }
